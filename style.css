@@ -95,7 +95,7 @@ button.option:hover {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   #final-message {
-    font-size: 18px; /* Make the text a bit smaller on mobile */
+    font-size: 20px; /* Make the text a bit smaller on mobile */
     width: 80%; /* Make the message width a bit larger on mobile */
     padding: 10px; /* Adjust padding for mobile screens */
   }
@@ -103,8 +103,8 @@ button.option:hover {
 
 @media (max-width: 480px) {
   #final-message {
-    font-size: 16px; /* Further reduce font size for small screens */
-    width: 95%; /* Make the width take up more space */
+    font-size: 18px; /* Further reduce font size for small screens */
+    width: 90%; /* Make the width take up more space */
     padding: 8px; /* Adjust padding for even smaller screens */
     white-space: normal; /* Allow wrapping of text */
   }
