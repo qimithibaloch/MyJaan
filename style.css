@@ -84,18 +84,19 @@ button.option:hover {
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%; /* Allow the message to take up 80% of the screen width */
+  width: 70%; /* Allow the message to take up 70% of the screen width */
+  max-width: 500px; /* Limit the max width to avoid very wide lines */
   line-height: 1.6; /* Optional: Control line height for better spacing */
   display: block; /* Make sure it's a block element to allow centering */
-  max-width: 500px; /* Optional: Limit the max width to avoid very wide lines */
   word-wrap: break-word; /* Ensure text breaks at the right place */
+  white-space: normal; /* Allow text to wrap naturally */
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   #final-message {
     font-size: 18px; /* Make the text a bit smaller on mobile */
-    width: 90%; /* Make the message width a bit larger on mobile */
+    width: 80%; /* Make the message width a bit larger on mobile */
     padding: 10px; /* Adjust padding for mobile screens */
   }
 }
@@ -105,7 +106,7 @@ button.option:hover {
     font-size: 16px; /* Further reduce font size for small screens */
     width: 95%; /* Make the width take up more space */
     padding: 8px; /* Adjust padding for even smaller screens */
-    word-wrap: break-word; /* Allow text to break into multiple lines */
+    white-space: normal; /* Allow wrapping of text */
   }
 }
 
