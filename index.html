@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Interactive Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="content">
+        <!-- Initial Question: Do you love me? -->
+        <div id="teddy-bear-container">
+                <img src="images/teddy.png" alt="Teddy Bear Icon" id="teddy-bear-icon" />
+            </a>
+            <p id="question">Do you love me?</p>
+            <button class="option" id="yes">Yes</button>
+            <button class="option" id="no">No</button>
+        </div>
+
+        <!-- Second Question: Will you be my Valentine? -->
+        <div id="message-container" style="display: none;">
+            <p id="valentine-question" style="display: none;">Will you be my Valentine?</p>
+            <button class="option" id="valentine-yes" style="display: none;">Yes</button>
+            <button class="option" id="valentine-no" style="display: none;">No</button>
+        </div>
+
+        <!-- Final message after both questions -->
+        <div id="final-message" style="display: none;"></div>
+
+        <!-- Floating Yes Buttons Container -->
+        <div id="hearts" style="position: absolute; top: 0; left: 0;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

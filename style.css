@@ -1,0 +1,177 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevent scrollbars when hearts are floating */
+}
+
+/* Container where hearts will appear */
+#hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  pointer-events: none; /* Prevent interaction with hearts */
+}
+
+/* Style for the teddy bear image */
+#teddy-bear-icon {
+  width: 100px; /* Adjust the width of the teddy bear image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the teddy bear */
+  transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Style for the main question */
+#question {
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the buttons */
+button.option {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1000; /* Ensure buttons are above other content */
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Hover effect for buttons */
+button.option:hover {
+  background-color: #f50057;
+}
+
+/* Style for the message container (second question) */
+#message-container {
+  display: none;
+}
+
+/* Style for the second question */
+#valentine-question {
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Final message styling */
+#final-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4081;
+  margin-top: 30px;
+  display: none; /* Hidden until clicked */
+}
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust the size of the teddy bear for smaller screens */
+  #teddy-bear-icon {
+    width: 80px;
+  }
+
+  /* Adjust button size for smaller screens */
+  button.option {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Adjust font size for the question */
+  #question, #valentine-question, #final-message {
+    font-size: 20px;
+  }
+
+  /* Adjust spacing between buttons on small screens */
+  button.option {
+    margin: 8px;
+  }
+
+  /* Adjust final message font size for mobile */
+  #final-message {
+    font-size: 18px;
+  }
+}
+
+/* Responsive Layout for smaller phones */
+@media (max-width: 480px) {
+  #question {
+    font-size: 18px; /* Smaller font size for small phones */
+  }
+
+  #valentine-question {
+    font-size: 18px; /* Smaller font size for second question */
+  }
+
+  button.option {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+
+  #final-message {
+    font-size: 16px;
+  }
+
+  #teddy-bear-icon {
+    width: 70px; /* Even smaller teddy for small phones */
+    pointer-events: none;
+  }
+}
+
+/* Keyframes for floating animation */
+@keyframes floatButton {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Heart style */
+.heart {
+  position: absolute;
+  font-size: 30px; /* Adjust the size of the heart */
+  animation: jump 3s ease-in-out forwards; /* Heart bounce animation */
+  opacity: 1;
+  pointer-events: auto; /* Allow hearts to be clickable */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Keyframes for jumping animation */
+@keyframes jump {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  50% {
+    transform: translateY(-40px); /* Jump up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+    opacity: 0; /* Fade out */
+  }
+}
