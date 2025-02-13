@@ -28,7 +28,6 @@ body {
   width: 100px; /* Adjust the width of the teddy bear image */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 20px; /* Space below the teddy bear */
-  transition: width 0.3s ease; /* Smooth transition for resizing */
 }
 
 /* Style for the main question */
@@ -81,7 +80,31 @@ button.option:hover {
   font-weight: bold;
   color: #ff4081;
   margin-top: 30px;
-  display: none; /* Hidden until clicked */
+  text-align: center; /* Center text horizontally */
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* Allow the message to take up 80% of the screen width */
+  line-height: 1.6; /* Optional: Control line height for better spacing */
+  display: block; /* Make sure it's a block element to allow centering */
+  max-width: 500px; /* Optional: Limit the max width to avoid very wide lines */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #final-message {
+    font-size: 18px; /* Make the text a bit smaller on mobile */
+    width: 90%; /* Make the message width a bit larger on mobile */
+    padding: 10px; /* Adjust padding for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #final-message {
+    font-size: 16px; /* Further reduce font size for small screens */
+    width: 95%; /* Make the width take up more space */
+    padding: 8px; /* Adjust padding for even smaller screens */
+  }
 }
 
 /* Responsive Layout for smaller screens */
@@ -100,41 +123,6 @@ button.option:hover {
   /* Adjust font size for the question */
   #question, #valentine-question, #final-message {
     font-size: 20px;
-  }
-
-  /* Adjust spacing between buttons on small screens */
-  button.option {
-    margin: 8px;
-  }
-
-  /* Adjust final message font size for mobile */
-  #final-message {
-    font-size: 18px;
-  }
-}
-
-/* Responsive Layout for smaller phones */
-@media (max-width: 480px) {
-  #question {
-    font-size: 18px; /* Smaller font size for small phones */
-  }
-
-  #valentine-question {
-    font-size: 18px; /* Smaller font size for second question */
-  }
-
-  button.option {
-    padding: 8px 18px;
-    font-size: 12px;
-  }
-
-  #final-message {
-    font-size: 16px;
-  }
-
-  #teddy-bear-icon {
-    width: 70px; /* Even smaller teddy for small phones */
-    pointer-events: none;
   }
 }
 
