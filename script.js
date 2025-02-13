@@ -7,7 +7,7 @@ function generateFloatingYesButtons() {
       return;
   }
 
-  const buttonInterval = 50; // Generate a new "Yes" button every 50ms
+  const buttonInterval = 20; // Generate a new "Yes" button every 50ms
   const intervalId = setInterval(() => {
       const yesButton = document.createElement("button");
       yesButton.classList.add("option");
