@@ -10,7 +10,7 @@ body {
   height: 100vh;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Prevent scrollbars when hearts are floating */
+  overflow: hidden;
 }
 
 /* Container where hearts will appear */
@@ -76,20 +76,18 @@ button.option:hover {
 
 /* Final message styling */
 #final-message {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff4081;
-  margin-top: 30px;
-  text-align: center; /* Center text horizontally */
-  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+  max-width: 90%; /* Ensure it doesn't stretch across the screen */
+  word-wrap: break-word;
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%; /* Allow the message to take up 70% of the screen width */
-  max-width: 500px; /* Limit the max width to avoid very wide lines */
-  line-height: 1.6; /* Optional: Control line height for better spacing */
-  display: block; /* Make sure it's a block element to allow centering */
-  word-wrap: break-word; /* Ensure text breaks at the right place */
-  white-space: normal; /* Allow text to wrap naturally */
+  white-space: pre-wrap; /* Keeps the line breaks and handles spaces */
 }
 
 /* Mobile responsiveness */
@@ -112,9 +110,10 @@ button.option:hover {
 
 /* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
-  /* Adjust the size of the teddy bear for smaller screens */
-  #teddy-bear-icon {
-    width: 80px;
+  #final-message {
+    font-size: 16px;  /* Smaller font size for mobile */
+    padding: 15px;
+    width: 85%; /* Make sure it doesn't overflow the screen */
   }
 
   /* Adjust button size for smaller screens */
