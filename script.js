@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Show the final love message
       document.getElementById("final-message").style.display = "block";
-      document.getElementById("final-message").innerHTML = "I will love you so much, show me your smile and hearts 💖";
+document.getElementById("final-message").innerHTML = 
+  "I love you so much, you are everything to me. I'm sorry for the times I don’t fully understand you and make you feel unsafe, but you mean the world to me. I value you deeply and cherish every moment with you.<br> Please show me your beautiful smile and send me your love with a heart 💖";
   });
 
   // Valentine No button click event
